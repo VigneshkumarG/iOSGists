@@ -2,6 +2,12 @@ import UIKit
 
 extension UIColor
 {
+    // Send full value like 255
+    public convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat = 1.0)
+    {
+        self.init(red: CGFloat(red)/255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: alpha)
+    }
+    
     // hex string can be #ff00ff / #ff00abff
     public convenience init?(hexString: String) {
         guard hexString.hasPrefix("#") else {
