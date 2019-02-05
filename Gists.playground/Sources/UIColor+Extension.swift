@@ -2,6 +2,19 @@ import UIKit
 
 extension UIColor
 {
+    // Get RGBA
+    
+    public func rgba() -> (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
+    {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        
+        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        return (red: red, green: green, blue: blue, alpha: alpha)
+    }
     // Send full value like 255
     public convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat = 1.0)
     {

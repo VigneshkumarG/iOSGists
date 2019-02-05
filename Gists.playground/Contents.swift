@@ -13,7 +13,7 @@ let string = String(data: data, encoding: .utf8)!
 
 let enumString = EnumGenerator().generateEnum(fromString: string)
 
-UIColor(red: 244, green: 200, blue: 120)
+UIColor(red: 244, green: 200, blue: 120).rgba()
 
 UIColor(hexString: UIColor.HTMLColor.aqua.getHexString())
 
